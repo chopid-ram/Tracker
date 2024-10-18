@@ -7,11 +7,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="https://merchant.paymentsway.co/assetsWidget/css/index.css " />
-    
+    <script src="Form.js"></script>
 </head>
 
 <body>
-    <script src="Form.js"></script>
     <form>
         <div>
             <div class="Container-1">
@@ -103,29 +102,32 @@
                 <a href="#" target="_blank">Ver Políticas de privacidad y tratamiento de datos personales</a>
             </div>
             <div id="payment-widget" >
-                <input type="submit" id="Enviar" class="container-13" value="Deseo pagar ahora">
+                <input type="submit" id="payment-widget" class="container-13" value="Deseo pagar ahora">
             </div>
         </div>
     </form>
-    <script src="https://merchant.paymentsway.co/assetsWidget/js/index.js">
+    <script src="https://merchant.paymentsway.co/assetsWidget/js/index.js"></script>
+    <script>
         const checkout = new widgetCheckout({
-    merchant_id : 65,
-    form_id : 655,
-    terminal_id : 568,
-    order_number : orderNumber,
-    amount : Number(valorfinal),
-    currency : 'COP',
-    order_description : 'Test de compra',
-    apikey : Apikey,
-    ip : '192.158.1.38',
-    additionalData : {
-    name: document.getElementById("nombre_completo").value,
-    identificationType: document.getElementById("tipo_documento").value,
-    email: document.getElementById("email").value,
-    lastName: document.getElementById("nombre_completo").value,
-    identification: document.getElementById("numero_documento").value,
-    },
-})
+            merchant_id: '173',
+            form_id: '566',
+            terminal_id: '483',
+            order_number: orderNumber,
+            amount: Number(valorfinal),
+            currency: 'COP',
+            order_description: 'Compra de ejemplo',
+            apikey: "Y2UwNjc2MzIzZGMzNWYzMTNjMGIxNGQzYWM2NDdjZTc4MmU3Zjk1YWEwM2RhNzUzMDIyM2I3MWFhYmM2YmI2NDYzOGZmZjlhM2VhMTdkMTFhODEyZGQ4NGIzOGU3ZDVjNmZiN2I2ZjdhMmQ2YjM3M2Q1YWM0MDE2MjZmMjI5ZmQ=",
+            ip: '192.158.1.38',
+            additionalData: '',
+            person: {
+                name: nombre_completo,
+                lastName: nombre_completo,
+                email: email,
+                identification: numero_documento,
+                identificationType: tipo_documento,
+                sameData: true,
+            },
+        });
     </script>
 </body>
 
